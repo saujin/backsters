@@ -1,0 +1,140 @@
+extends ../layout
+
+block content
+
+  section.content
+    header
+      h1 Sign up
+      p Find exciting companies in 3 quick steps
+    ul.steps(data-steps-count='3')
+      li.past(data-step='1') Basic information
+      li.past(data-step='2') Investment criteria
+      li.active(data-step='3') Preferences
+    form.form-advanced.wide.form-apply(action='/api/signUp/step3',method='POST')
+      input(type='hidden',name='nextStep',value='final')
+      .form-split.pull-right
+        fieldset
+          legend Preferred geographies *
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Los Angeles',required='required')
+            span.fake-input
+            label Los Angeles
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='San Francisco',required='required')
+            span.fake-input
+            label San Francisco
+           .field
+            input(type='checkbox',name='preferredGeographies[]',value='Silicon Valley',required='required')
+            span.fake-input
+            label Silicon Valley
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='San Diego',required='required')
+            span.fake-input
+            label San Diego
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Seattle',required='required')
+            span.fake-input
+            label Seattle
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Chicago',required='required')
+            span.fake-input
+            label Chicago
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='New York',required='required')
+            span.fake-input
+            label New York
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Boston',required='required')
+            span.fake-input
+            label Boston
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Denver',required='required')
+            span.fake-input
+            label Denver
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Austin',required='required')
+            span.fake-input
+            label Austin
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Atlanta',required='required')
+            span.fake-input
+            label Atlanta
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Portland',required='required')
+            span.fake-input
+            label Portland
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Phoenix',required='required')
+            span.fake-input
+            label Phoenix
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Europe',required='required')
+            span.fake-input
+            label Europe
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Asia',required='required')
+            span.fake-input
+            label Asia
+          .field
+            input(type='checkbox',name='preferredGeographies[]',value='Australia',required='required')
+            span.fake-input
+            label Australia
+          //
+            a.link-select-all(href='') Select all
+
+      .form-solo.pull-left
+        fieldset
+          legend Preferred industries *
+          //
+            .field
+              input(type='checkbox',name='preferredIndustries[]',value='industry 1',required='required')
+              span.fake-input
+              label radio off
+            .field
+              input(type='checkbox',name='preferredIndustries[]',value='industry 2',required='required')
+              span.fake-input
+              label radio off
+            .field
+              input(type='checkbox',name='preferredIndustries[]',value='industry 3',required='required')
+              span.fake-input
+              label radio on
+            .field
+              input(type='checkbox',name='preferredIndustries[]',value='industry 4',required='required')
+              span.fake-input
+              label radio on
+          .field.full 
+            select(name='preferredIndustries[]',multiple='multiple',data-placeholder='Select an option',required='required')
+              option Adtech
+              option AI
+              option Biotech
+              option Clean Tech and Energy
+              option Communication and Collaboration
+              option Computer Security
+              option Consumer Products
+              option Data Analytics and Science
+              option E-commerce and Subscription
+              option Education
+              option Enterprise Software and B2B
+              option Fin Tech
+              option Food and Beverage
+              option Gaming
+              option Hardware/Software and Internet of Things
+              option Healthcare, Health and Wellness
+              option Industrial
+              option Internet Infrastructure
+              option Marketplaces and Community
+              option Media and Content
+              option Mobile and Platforms
+              option Nanotech
+              option Pharmaceuticals
+              option Robotics
+              option Social Network
+              option Transportation and Logistics
+              option VR and AR
+        fieldset
+          legend Other preferences
+          .field
+            textarea(name="otherPreferences",title='Other preferences',placeholder="Tell us any other preferences you'd like us to keep in mind.")
+      input.btn(type='submit',value='Complete')
+      //
+        p.center You can update your profile later

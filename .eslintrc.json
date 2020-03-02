@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "./js-coding-standards/environments/nodejs/latest.yml",
+    "./js-coding-standards/environments/nodejs/best-practices.yml"
+  ],
+  "rules": {
+    "valid-jsdoc": 2,
+    "strict": [0, "never"]
+  },
+  "parser": "babel-eslint"
+}

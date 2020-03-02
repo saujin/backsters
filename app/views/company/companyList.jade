@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  section.content
+    section.results
+      ul.results-list
+        each company in companies
+          li
+            h3 #{company.name}
+            .description
+              p!= company.description
+            a.view-profile(href='/companies/#{company._id}') View profile

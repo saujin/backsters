@@ -1,0 +1,145 @@
+doctype true
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title Backster | A 79 Studios Company
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body(style='font-family: Arial, sans-serif;color: rgb(75, 79, 82); margin: 0; padding: 0; background:#ffffff')
+    table(align='center', border='0', cellpadding='0', cellspacing='0', width='760')
+      tr
+        td(align='center', bgcolor='#ffffff', style='padding: 80px 0 20px 0;background-position: center')
+          img(src='http://' + host + '/img/email/backster-mail-logo.png', alt='logo', width='363', height='140', style='display: block;')
+      tr
+        td(bgcolor='#ffffff', style='padding: 40px 30px 40px 30px;')
+          table(border='0', cellpadding='0', cellspacing='0', width='100%')
+            tr
+              td
+                h1(style='text-align: center; font-size: 48px') Backsters - Investor interest
+            tr
+              td
+                table(style='padding: 40px 120px 40px 120px;', border='0', cellpadding='0', cellspacing='0', width='100%')
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Investor:
+                    td
+                      | #{investor.firstName} #{investor.lastName}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Is interested in the company:
+                    td
+                      | #{company.name}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Email:
+                    td
+                      a(href='mailto:#{investor.email}') #{investor.email}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Company:
+                    td
+                      | #{investor.company}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Network:
+                    td
+                      | #{investor.network}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Investment stage::
+                    td
+                      | #{investor.investmentStage}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Average check size:
+                    td
+                      | #{investor.averageCheckSize}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Other preferences:
+                    td
+                      | #{investor.otherPreferences}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Company name:
+                    td
+                      | #{company.name}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Description:
+                    td
+                      | #{company.description}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Founder:
+                    td
+                      | #{company.founderFirstName} #{company.founderLastName}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Website:
+                    td
+                      a(href=company.websiteUrl) #{company.websiteUrl}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Email:
+                    td
+                      a(href='mailto:#{company.email}') #{company.email}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Phone:
+                    td
+                      #{company.phoneNumber}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Location:
+                    td
+                      | #{company.location}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Crunchbase:
+                    td
+                      a(href=company.crunchbaseUrl) #{company.crunchbaseUrl}
+                  tr(style='height: 35px; color: #4b4f52')
+                    td(style='text-align: right; padding-right: 2em; width: 50%;')
+                      strong
+                        | Angelco:
+                    td
+                      a(href=company.angelcoUrl) #{company.angelcoUrl}
+
+    table(border='0', cellpadding='0', cellspacing='0', width='100%')
+      tr(bgcolor='#112533')
+        td
+          table(border='0', cellpadding='0', cellspacing='0', width='768px', style='margin: auto')
+            tr
+              td(style='padding: 80px 50px 70px 50px;')
+                table(border='0', cellpadding='0', cellspacing='0', width='100%')
+                  tr
+                    td(style='color: #868d91')
+                      | © 2015 | 79 Studios, LLC
+                    td
+                      a(style='color: white', href='mailto:flexteam@79studios.com') hello@79studios.com
+                    td(align='right')
+                      table(border='0', cellpadding='0', cellspacing='0')
+                        tr
+                          td
+                            a(href='https://twitter.com/79studiosllc')
+                              img(src='http://' + host + '/img/email/twitter.png', alt='Twitter', width='38', height='38', style='display: block;', border='0')
+                          td(style='font-size: 0; line-height: 0;', width='20')  
+                          td
+                            a(href='https://www.facebook.com/79studiosllc')
+                              img(src='http://' + host + '/img/email/facebook.png', alt='Facebook', width='38', height='38', style='display: block;', border='0')

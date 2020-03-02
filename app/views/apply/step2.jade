@@ -1,0 +1,79 @@
+extends ../layout
+
+block content
+
+  section.content
+    header
+      h1 Apply
+      p Connect to our investor network in 4 quick steps
+    ul.steps
+      li.past(data-step='1') Basic information
+      li.active(data-step='2') Company info
+      li(data-step='3') Founding team
+      li(data-step='4') Fundraising info
+    h2.company-name #{formApply.company}
+    form.form-advanced.form-apply(action='/api/apply/step2',method='POST')
+      input(type='hidden',name='step',value=2)
+      input(type='hidden',name='nextStep',value='step3')
+      .form-solo.pull-right
+        fieldset
+          legend Specify the industry
+          .field.full 
+            select(name='industry[]',multiple='multiple',data-placeholder='Select an option')
+              option Adtech
+              option AI
+              option Biotech
+              option Clean Tech and Energy
+              option Communication and Collaboration
+              option Computer Security
+              option Consumer Products
+              option Data Analytics and Science
+              option E-commerce and Subscription
+              option Education
+              option Enterprise Software and B2B
+              option Fin Tech
+              option Food and Beverage
+              option Gaming
+              option Hardware/Software and Internet of Things
+              option Healthcare, Health and Wellness
+              option Industrial
+              option Internet Infrastructure
+              option Marketplaces and Community
+              option Media and Content
+              option Mobile and Platforms
+              option Nanotech
+              option Pharmaceuticals
+              option Robotics
+              option Social Network
+              option Transportation and Logistics
+              option VR and AR
+      .form-generic.pull-left
+        .field.required
+          input(type='text',name='websiteUrl',placeholder='Website',value=formApply.websiteUrl,required='required')
+        .field.required
+          textarea(type='text',name='description',placeholder='Company description',title='Description',required='required') #{formApply.description}
+        .field.required
+          select(name='location',required='required')
+            option(value='') Location
+            option(value='Los Angeles') Los Angeles
+            option(value='San Francisco') San Francisco
+            option(value='Silicon Valley') Silicon Valley
+            option(value='San Diego') San Diego
+            option(value='Seattle') Seattle
+            option(value='Chicago') Chicago
+            option(value='New York') New York
+            option(value='Boston') Boston
+            option(value='Denver') Denver
+            option(value='Austin') Austin
+            option(value='Atlanta') Atlanta
+            option(value='Portland') Portland
+            option(value='Phoenix') Phoenix
+            option(value='Europe') Europe
+            option(value='Asia') Asia
+            option(value='Australia') Australia
+
+        .field
+          input(type='text',name='crunchbaseUrl',placeholder='Crunchbase link',value=formApply.crunchbaseUrl)
+        .field
+          input(type='text',name='angelcoUrl',placeholder='Angel.co link',value=formApply.angelcoUrl)
+      input.btn(type='submit', value='Next')

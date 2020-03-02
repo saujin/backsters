@@ -1,0 +1,86 @@
+extends layout
+
+block content
+	section.landing
+		.cell
+			h1
+				| Handpicked, personalized 
+				br
+				|  investments
+				br
+				|  delivered to you
+
+			a.btn(href='/signup') Get started
+		a.btn-down(href='#how-it-works') Discover more
+
+	section.content
+		article.info-box(id='how-it-works')
+			h2
+				| How 
+				br
+				|  it works
+			.description
+				p
+					| Think of us as your matchmakers. 
+					br
+					| As investors, we continually vet new opportunities, 
+					br
+					| and want to share the good ones with you.
+		ul.list-three
+			li
+				span 01
+				figure
+					img(src='img/fig-criteria.png', alt='Tell us your investment criteria')
+				figcaption
+					| Tell us your 
+					br
+					| investment criteria
+			li
+				span 02
+				figure
+					img(src='img/fig-deals.png', alt='We send you vetted deals that match')
+				figcaption
+					| We send you vetted
+					br
+					| deals that match
+			li
+				span 03
+				figure
+					img(src='img/fig-connect.png', alt='If interested, we connect you and you do the rest')
+				figcaption
+					| If interested, we connect you 
+					br
+					| and you do the rest
+		article.info-box(id='who-we-are')
+			h2
+				| Who 
+				br
+				|  we are
+			.description
+				p
+					| We are 79 Studios, LA-based startup studio building products that create a #newplayingfield. Our goal is to increase the number of underrepresented investors backing underrepresented founders. We hope Backster can be a useful tool for investors to discover (and soon share) founders who need our collective support.
+				a.btn.btn-stroke.btn-mobile-small(href='http://www.79studios.com',target='_blank') Learn more about 79 Studios
+		article.info-box(id='for-founders')
+			h2
+				| For 
+				br
+				|  founders
+			.description
+				p
+					| We are looking for exceptional founders who want to connect to our network of investors. Fill out your information and we will contact you to learn more about you.
+					br
+					| Once you are accepted, we will send your profile to our network of investors, who will contact you if they're interested in investing.
+				a.btn.btn-stroke(href='/apply') Apply now
+
+	section.pitch-bar
+		article.info-box
+			h2
+				| Contact 
+				br
+				|  us
+			.description
+				p
+					| Do you have a founder you'd like us to meet or have a deal that you would like to share with our community?
+					br
+					| Or maybe you'd just like to give us a suggestion or say hello. Please contact us. We'd love to hear from you.
+				a.btn.btn-stroke(href='mailto:hello@79studios.com') Get in touch

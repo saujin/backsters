@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  section.content
+    header
+      h1 Apply
+      p Connect to our investor network in 4 quick steps
+    ul.steps
+      li.active(data-step='1') Basic information
+      li(data-step='2') Company info
+      li(data-step='3') Founding team
+      li(data-step='4') Fundraising info
+    form.form-generic.form-apply(action='/api/apply/step1',method='POST')
+      input(type='hidden',name='step',value=1)
+      input(type='hidden',name='nextStep',value='step2')
+      fieldset
+        .field.required
+          input(type='text',name='firstName',placeholder='First name',value=formApply.firstName,required='required')
+        .field.required
+          input(type='text',name='lastName',placeholder='Last name',value=formApply.lastName,required='required')
+        .field.required
+          input(type='text',name='company',placeholder='Company',value=formApply.company,required='required')
+        .field.required
+            input(type='text',name='email',placeholder='Email',value=formApply.email,required='required')
+        .field.required
+          input(type='text',name='phoneNumber',placeholder='Phone number',value=formApply.phoneNumber,required='required')
+        input.btn(type='submit', value='Next')

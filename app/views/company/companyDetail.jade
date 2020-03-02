@@ -1,0 +1,72 @@
+extends ../layout
+
+block content
+  section.content.wide
+    h2 #{company.name}
+    aside.companies-overview
+      //
+        div
+          h4 Founder information
+          p
+            | #{company.founderFirstName} #{company.founderLastName}
+        //
+          p
+            a(href='mailto:#{company.email}') #{company.email}
+          p
+            | #{company.phoneNumber}
+      div
+        h4 Backster community interest
+        ul
+          li
+            strong #{visitorsCount}
+            |  Investor visitors
+          li
+            strong.js-interest-count #{interestsCount}
+            |  Showed interest
+        if isCurrentUserInterested
+          p
+            | Thanks for your interest! We'll get in touch shortly
+        else
+          p.js-add-interest-result
+            | Thanks for your interest! We'll get in touch shortly
+          p.js-add-interest-initial
+            | If you're interested to learn more, please click the button below and we'll send you the founder's contact information.
+          a.btn.js-add-interest(href='',data-company-id=company.id) I'm interested
+      div
+        h4 79 Studios notes to share
+        p!= company.note
+    article.company-information
+      .company-information-block
+        h2.block-divider
+          span Company information
+        .half-list
+          .item
+            h4 Location
+            p
+              | #{company.location}
+          .item
+            h4 Industry
+            p
+              if company.industry
+                | #{company.industry.join(', ')}
+        h4 Description
+        p!= company.description
+        ul.company-links
+          if company.websiteUrl
+            li
+              a(href='#{company.websiteUrl}') Website
+          if company.crunchbaseUrl
+            li
+              a(href='#{company.crunchbaseUrl}') Crunchbase
+          if company.angelcoUrl
+            li
+              a(href='#{company.angelcoUrl}') Angel.co profile
+      .company-information-block
+        h2.block-divider
+          span Team information
+        ul.list-team
+          each teamMember in company.team
+            li
+              .name #{teamMember.name}
+              span.job-title #{teamMember.title}
+              a.profile(href='#{teamMember.linkedinProfileUrl}') LinkedIn profile

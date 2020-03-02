@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+
+  section.content
+    .center
+      h1 Thank you
+      //
+        p.hero Here are the companies that match your criteria
+        ul
+          li
+            a(href='') Oban, LLC
+          li
+            a(href='') Periphery, LLC
+          li
+            a(href='') Paulson Roberts, LLC
+          li
+            a.link-add(href='') View all
+        p
+      | As we vet new companies, we will email you when they 
+      br
+      |  match your criteria to your email address.
+      //
+        a.btn(href='/profile') Update your profile
+      br
+      a.btn.modal-login.btn-mobile-small(href='/') Login to see company directory

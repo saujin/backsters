@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+
+  section.content
+    if isLogged
+        .hero.center You are already logged in
+    else
+      header
+        h1 Log in
+      form.form-generic.form-login(action='/api/login',method='POST',data-login-success='You have been logged in successfuly.')
+        fieldset
+          .field.required
+            input(type='text',name='username',placeholder='Email',value='',required='required')
+          .field.required
+            input(type='password',name='password',placeholder='Password',value='',required='required')
+        input.btn(type='submit',value='Log in')

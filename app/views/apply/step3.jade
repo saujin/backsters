@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+
+  section.content
+    header
+      h1 Apply
+      p Connect to our investor network in 4 quick steps
+    ul.steps
+      li.past(data-step='1') Basic information
+      li.past(data-step='2') Company info
+      li.active(data-step='3') Founding team
+      li(data-step='4') Fundraising info
+    form.form-generic.form-apply(action='/api/apply/step3',method='POST')
+      input(type='hidden',name='step',value=3)
+      input(type='hidden',name='nextStep',value='final')
+      input(type='hidden',name='team[0][name]',value='#{formApply.firstName} #{formApply.lastName}')
+      
+      fieldset
+        h2.member-name #{formApply.firstName} #{formApply.lastName}
+        .field.required
+          input(type='text',name='team[0][title]',placeholder='Title',required='required')
+        .field.required
+          input(type='text',name='team[0][linkedinProfileUrl]',placeholder='LinkedIn Profile',required='required')
+        .center
+          a.link-add(href='') Add another team member
+
+      fieldset.additional-member
+        legend Additional member
+        .field.required
+          input(type='text',name='team[1][title]',placeholder='Title',required='required')
+        .field.required
+          input(type='text',name='team[1][name]',placeholder='Name',required='required')
+        .field
+          input(type='text',name='team[1][linkedinProfileUrl]',placeholder='LinkedIn Profile')
+        .center
+          a.link-remove(href='') Remove this team member
+
+      input.btn(type='submit', value='Next')

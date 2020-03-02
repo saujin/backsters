@@ -1,0 +1,49 @@
+{
+  "name": "NodeBackster",
+  "description": "Implementation of the Backster project.",
+  "author": "Josef Zavisek, Jiri Komon",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "startInfo": "node index.js | bunyan -l info",
+    "startDebug": "node index.js | bunyan -l debug",
+    "eslint": "node ./node_modules/eslint/bin/eslint ./app"
+  },
+  "engines": {
+    "node": "^5.1.0",
+    "npm": "^3.3.12"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "babel-register": "^6.2.0",
+    "bcrypt": "^0.8.5",
+    "bluebird": "^2.9.34",
+    "body-parser": "^1.13.3",
+    "bunyan": "^1.5.1",
+    "cookie-parser": "^1.4.0",
+    "escape-html": "^1.0.3",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "jade": "^1.11.0",
+    "jsonschema": "^1.0.2",
+    "le_node": "^1.1.1",
+    "mongoose": "^4.2.8",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "sendgrid": "^2.0.0",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "eslint": "^1.10.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5"
+  }
+}

@@ -1,0 +1,10 @@
+form.user-panel(action='/api/logout',method='POST')
+	a.user(href='') #{user.firstName} #{user.lastName}
+	ul
+		li
+			a(href='/companies') Company directory
+		//
+			li
+				a(href='/profile') Edit your profile
+		li
+			input(type='submit',value='Log out')

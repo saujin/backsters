@@ -1,0 +1,47 @@
+extends ../layout
+
+block content
+
+  section.content
+    header
+      h1 Sign up
+      p Find exciting companies in 3 quick steps
+    ul.steps(data-steps-count='3')
+      li.past(data-step='1') Basic information
+      li.active(data-step='2') Investment criteria
+      li(data-step='3') Preferences
+    form.form-advanced.form-apply(action='/api/signup/step2',method='POST')
+      input(type='hidden',name='nextStep',value='step3')
+      .form-generic.pull-right
+        .field.required
+          select(name='averageCheckSize',required='required')
+            option(value='') Average check size
+            option(value='$10-25K') $10-25K
+            option(value='$25-50K') $25-50K
+            option(value='$50-$100K') $50-$100K
+            option(value='$100K-$250K') $100K-$250K
+            option(value='$250K+') $250K+
+      .form-split.pull-left
+        fieldset
+          legend Stage of investment *
+          .field
+            input(type='radio',name='investmentStage',id='angel',value='angel',checked='checked')
+            span.fake-input
+            label(for='angel') Pre-seed (< $250k)
+          .field
+            input(type='radio',name='investmentStage',id='seriesb',value='seriesb')
+            span.fake-input
+            label(for='seriesb') Series B (< $10m+)
+          .field
+            input(type='radio',name='investmentStage',id='seed',value='seed')
+            span.fake-input
+            label(for='seed') Seed ($250k - $1m)
+          .field
+            input(type='radio',name='investmentStage',id='seriesbplus',value='seriesbplus')
+            span.fake-input
+            label(for='seriesbplus') Series B+
+          .field
+            input(type='radio',name='investmentStage',id='seriesa',value='seriesa')
+            span.fake-input
+            label(for='seriesa') Series A ($1m - $10m)
+      input.btn(type='submit',value='Next')

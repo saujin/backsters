@@ -1,0 +1,285 @@
+@media screen and (max-width: 1420px){
+}
+
+
+
+@media screen and (max-width: 1020px){
+
+	@basefontsize:14px;
+
+	body{
+		min-width:0;
+		font-size:@basefontsize;
+	}
+
+	h1{
+		.font-size(34px,46px);
+	}
+
+	.mobile-menu{
+		display:block;
+	}
+
+	.menu{
+		display:none;
+		border-bottom:2px solid @greylight;
+
+		li{
+			display:block;
+			margin:0;
+			padding:60px 0 0 0;
+			text-align:center;
+			text-transform:uppercase;
+			font-size:18px;
+
+			&:last-child{
+				padding-bottom:60px;
+			}
+		}
+
+		input{
+			display:inline-block;
+			margin:0;
+			padding:0;
+			text-transform:uppercase;
+			background:@white;
+			border-bottom:1px solid transparent;
+			.transition(all 0.15s ease-in-out);
+
+			&:hover{
+				color:@blue;
+				border-bottom:1px solid @blue;
+			}
+		}
+
+		.mobile-only{
+			display:block;
+		}
+
+		.modal-login{
+			display:inline-block !important;
+		}
+	}
+
+	.user-panel{
+		display:none;
+	}
+
+	.cell{
+		display:block;
+	}
+
+	.btn{
+		font-weight:400;
+		padding:0 20px;
+		height:46px;
+		line-height:42px;
+		min-width:100px;
+	}
+
+	.header{
+		height:auto;
+		padding:15px;
+
+		.menu,
+		.modal-login{
+			display:none;
+		}
+	}
+
+	.header,
+	.content{
+		width:auto;
+		margin:0 0 40px 0;
+	}
+
+	.content,
+	.landing,
+	.pitch-bar{
+		padding:30px;
+	}
+
+	.content{
+		&.wide{
+			width:auto;
+		}
+	}
+
+	.landing{
+		height:auto;
+		position:static;
+		text-align:center;
+
+		&:before{
+			display:none;
+		}
+
+		.cell{
+			width:auto;
+		}
+	}
+
+	.logo{
+		position:static;
+		font-size:17px;
+		font-weight:400;
+
+		span{
+			font-size:7px;
+		}
+	}
+
+	.btn-down{
+		position:relative;
+		margin:50px auto;
+		bottom:auto;
+		left:auto;
+	}
+
+	.info-box{
+		text-align:center;
+		padding:0;
+		margin-bottom:80px;
+
+		&:last-child{
+			margin-bottom:0;
+		}
+
+		h2{
+			position:static;
+			text-transform:uppercase;
+			.font-size(26px,36px);
+
+			&:after{
+				.size(85px,6px);
+				margin:0 auto;
+				position:relative;
+				top:10px;
+			}
+		}
+
+		p{
+			margin-bottom:0;
+		}
+
+		.btn{
+			margin-top:40px;
+		}
+	}
+
+	.steps,
+	.steps[data-steps-count="3"]{
+		text-align:center;
+		margin:50px auto;
+		width:100%;
+
+		&:after{
+			display:none;
+		}
+
+		li{
+			width:50%;
+			margin-bottom:30px;
+		}
+	}
+
+	.form-generic{
+		margin:50px auto;
+	}
+
+	.form-advanced,
+	.form-solo,
+	.form-split,
+	.form-generic:not(.form-login){
+		width:100% !important;
+		float:none !important;
+	}
+
+	.form-login{
+		margin-top:100px;
+	}
+
+	.form-split{
+		.field{
+			display:block;
+			width:100%;
+		}
+	}
+
+	.results{
+		width:auto;
+	}
+
+	.companies-overview,
+	.company-information{
+		float:none;
+		width:auto;
+	}
+
+	.pitch-bar{
+		.info-box{
+			width:auto;
+		}
+	}
+
+	.list-three{
+		width:100%;
+		margin-top:20px;
+
+		li{
+			width:auto;
+			display:block;
+			margin-bottom:60px;
+			font-size:@basefontsize;
+		}
+	}
+
+	footer{
+
+		h4{
+			font-size:18px;
+		}
+
+		.block{
+			margin-bottom:30px;
+		}
+
+		.in{
+			padding-left:50px;
+			padding-right:50px;
+			width:100%;
+		}
+
+		.contact{
+			float:none;
+			clear:both;
+			margin:0;
+			padding:50px 0 0 0;
+		}
+	}
+
+	.copyright{
+		display:table;
+		font-weight:400;
+		width:100%;
+		.font-size(12px,20px);
+
+		span{
+			display:block;
+		}
+
+		.cell{
+			display:table-cell;
+		}
+	}
+
+}
+
+@media screen and (max-width: 920px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 480px){
+}

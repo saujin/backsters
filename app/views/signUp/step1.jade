@@ -1,0 +1,60 @@
+extends ../layout
+
+block content
+
+  section.content
+    header
+      h1 Sign up
+      p Find exciting companies in 3 quick steps
+    ul.steps(data-steps-count='3')
+      li.active(data-step='1') Basic information
+      li(data-step='2') Investment criteria
+      li(data-step='3') Preferences
+    form.form-generic.form-apply(action='/api/signup/step1',method='POST')
+      input(type='hidden',name='nextStep',value='step2')
+      fieldset
+        .field.required
+          input(type='password',name='betaAccessCode',placeholder='Beta access code',value='',required='required')
+        .field.required
+          input(type='text',name='firstName',placeholder='First Name',value=firstName,required='required')
+        .field.required
+          input(type='text',name='lastName',placeholder='Last name',value=lastName,required='required')
+        .field.required
+          input(type='text',name='company',placeholder='Company',value=company,required='required')
+        .field.required
+          input(type='text',name='email',placeholder='Email',value=email,required='required')
+        .field.required
+          input(type='password',name='password',placeholder='Password',required='required')
+        .field
+          select(name='network')
+            option(value='') Network
+            option(value='LAWA') Los Angeles Women Angels
+            option(value='pipeline') Pipeline Angels
+      input.btn(type='submit',value='Next')
+
+
+    //
+      form.form-advanced(action='/api/signup/step1',method='POST')
+        .table
+          .form-generic.cell
+            a.btn.btn-linkedin(href='')
+              | Sign up with 
+              i LinkedIn
+          .cell
+            span.or or
+          .form-generic.cell
+            fieldset
+              .field.required
+                input(type='text',name='firstName',placeholder='Name',value=firstName)
+              .field.required
+                input(type='text',name='lastName',placeholder='Last name',value=lasttName)
+              .field
+                input(type='text',name='company',placeholder='Company',value=company)
+              .field.required
+                input(type='text',name='company',placeholder='Email',value=email)
+              .field
+                select(name=network)
+                  option Network
+                  option Angel Network
+                  option Crunchbase
+        input.btn(type='submit',value='Next')

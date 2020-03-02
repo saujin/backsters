@@ -1,0 +1,15 @@
+# Logs
+logs
+docs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directory
+node_modules
+bower_components
+
+# IDE files
+.idea
+.vscode
